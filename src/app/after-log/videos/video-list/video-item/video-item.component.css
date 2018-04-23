@@ -1,0 +1,56 @@
+.sekwencja {
+	position: none;
+	height: 100%;
+}
+
+.caption {
+	font-size: 12px;
+}
+
+.video-caption {
+	margin: 4px 2px 0 8px;
+}
+
+.rightstr {
+    position: absolute;
+    top: 32px;
+    right: 10px;
+    z-index: 1;
+    color: #fff;
+}
+
+.video-caption p {
+	margin: 0 0 6px;
+}
+
+.video-top-buttons {
+	position: relative;
+	float: right;
+	margin-top: -25px;
+}
+
+.video-top-buttons button {
+	background-color: #181419;
+	opacity: 0.8;
+	border: none;
+}
+
+.glyphicon {
+	color: #fcfcfc;
+	font-size: 1em;
+	opacity: 0.8;
+  	transition: all 0.4s;
+}
+.glyphicon:focus, .glyphicon:hover, .glyphicon:active {
+	border-color: #181419;
+	font-size: 1.2em;
+	border: 0;
+	opacity: 1;
+}
+
+.video-top-buttons button:focus, .video-top-buttons button:hover, .video-top-buttons button:active {
+	border-color: #181419;
+	text-rendering: none;
+	border: 0;
+	outline: none;
+}

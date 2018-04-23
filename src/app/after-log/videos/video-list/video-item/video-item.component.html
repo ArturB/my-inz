@@ -1,0 +1,26 @@
+<div class="video">
+<div class="video-caption">
+    <p class="caption">{{video.videoName}}</p>
+    <div class="rightstr">
+        <p class="caption">{{video.videoDate | date:'yyyy-MM-dd'}}</p>
+    </div>
+    <span class="video-top-buttons">
+        <button type="submit" (click)="addVideo()" title="Dodaj do konta">            
+            <span class="glyphicon glyphicon-plus"></span>
+        </button>             
+    </span>
+</div>
+<div class="movie">
+    <div class="embed-responsive embed-responsive-16by9 sekwencja"
+    >        
+        <video appVideoControls class="embed-responsive-item"
+        autoplay       
+        controls
+        #videoPath>        
+            <source
+            [src]="video.videoPath" 
+            type="video/mp4">	
+        </video>
+    </div>
+</div>
+</div>

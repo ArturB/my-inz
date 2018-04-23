@@ -1,0 +1,117 @@
+.fixItem {
+	position: fixed;
+    bottom: 10px;
+	right: 0;
+	z-index: 2;
+	
+}
+
+/*SORT & FILTER*/
+.search-center {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+	.block-center {
+		width: 36%;
+		margin: 0 auto;
+	}
+
+	.search-center {
+		width: 22%;
+		margin: 0 auto;
+		margin-bottom: 0;
+		margin-top: 16px;
+	}
+	.filterDate {
+		width: 40%;
+		margin: 0 auto;
+		/*margin-bottom: 84px;*/
+	}
+}
+
+.isSearch .glyphicon {
+	color: #ffe2be;
+}
+
+/*VIDEOS*/
+/*set-recordings*/
+
+.set-recordings {
+	margin-top: -36px;
+}
+.videos-pad {
+	/*margin-top: 20px;*/
+	margin-bottom: 50px;
+}
+
+
+.pad {
+	padding: 2px;
+	/*background-color: #313735;*/
+	border: solid 2px #333;
+}
+
+.pad .video-caption {
+	margin-bottom: -23px;
+}
+
+@media (max-width: 767px) {
+	.set-recordings {
+		margin-top: -36px;
+	}
+	.searchAll {
+	    margin-top: -20px;
+
+	}
+	.filterDate {
+		margin-top: 14px;
+	}
+	
+}
+
+@media (max-width: 500px) {
+	.searchBtn {
+	    position: absolute;	
+    	margin-top: 40px;
+    	margin-left: 42px;
+	}
+}
+
+.set-recordings button {
+	background-color: #181419;
+	opacity: 0.8;
+	border: none;
+}
+
+.glyphicon {
+	color: #f4ede4;
+	font-size: 2em;
+	-webkit-transition: .5s ease;
+    transition: .5s ease;
+}
+
+.activeNRec .glyphicon {
+	color: #ffe2be;
+	cursor: default;
+}
+.activeNRec2 .glyphicon {
+	color: #ffe2be;
+	cursor: default;
+}
+/**/
+
+.butBlock:hover, .butBlock:focus {
+	opacity: 1;
+}
+
+@media (max-width: 767px) {
+	.bSet {
+		margin-top: 17px;
+	}
+}
+
+#noVideos {
+  margin-top: 40px; 
+  text-align: center;
+}

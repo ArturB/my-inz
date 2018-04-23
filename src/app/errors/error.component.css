@@ -1,0 +1,34 @@
+.alert-danger {
+    border-color: #a94442;
+    text-align: center;    
+}
+.title {
+    color: #da5050; 
+}
+.title, p {
+    margin: 0;
+    margin-bottom: 10px;
+    border-radius: 0;
+}
+.alert {
+    margin-bottom: 0;
+}
+.glyphicon-remove {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background-color: #f2dede;
+    border: none;
+    font-size: 1.3em;
+    color: #da5050;
+    transition: all 0.4s;
+}
+p {
+    color: #a94442;
+}
+a {
+    color: #da5050;
+}
+.glyphicon-remove:focus, .glyphicon-remove:hover, .glyphicon-remove:active {
+    font-size: 1.5em;
+}

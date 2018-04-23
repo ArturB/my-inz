@@ -1,0 +1,137 @@
+@media (min-width: 992px) {
+    .pad-r {
+    margin-right: 10px;
+}
+    .pad-l {
+        margin-left: 10px;
+    }
+}
+
+/*SUCCESS MESSAGE*/
+
+.backdrop {
+    background-color: rgba(0,0,0,0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+}
+
+.modal {
+    position: absolute;
+    width: 280px;
+    min-width: 140px;
+    height: 220px;
+    top: 95px;
+    left: 60px;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 4px 8px 12px 0 rgba(0,0,0,0.4);
+    text-align: center;
+    overflow: hidden;
+    animation: show-modal .7s ease-in-out;
+    
+    /*&.hide {
+        animation: hide-modal .6s ease-in-out both;
+    }*/
+    
+}   
+
+.title {
+    display: block;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    margin: 14px 0 5px 0;
+    color: #3c2f40;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 19px;
+    margin: 0;
+    margin-top: 16px;
+    color: #3c2f40;
+}
+
+.closeButton:active {
+        animation: hide-modal .6s ease-in-out both;
+
+}
+
+
+
+@keyframes show-modal {
+    0% {
+        transform: scale(0);
+    }
+    60% {
+        transform: scale(1.1);
+    }
+    80% {
+        transform: scale(.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.closeButton {
+    position: absolute;
+    height: 40px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border: none;
+    background: #24ce87;
+    color: #fff;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background .3s ease-in-out;
+    
+    /*&:hover {
+        background: #EC3434;
+    }*/
+    
+}
+
+.closeButton:hover {
+    background-color: #0ed07f;
+}
+    
+
+.successLeft {
+    margin-top: 24px;
+
+    background: #24ce87; 
+    border: none; 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 24px;
+}
+
+.glyphicon-ok {
+    color: #fcfcfc;
+    font-size: 1.3em;
+    padding: 10px 1px 0 1px;
+   
+}
+
+.backdrop, .frame, .modal {
+    display: block;
+}

@@ -1,0 +1,30 @@
+<nav class="nav navbar navbar-inverse" role="navigation" [ngClass]="{isMarginB: isMarginBottom}">
+    <div class="my-container">
+        <div id="top-navbar">
+            <ul class="topNav">
+                <li class="all-videos" id="homeLi" 
+                    routerLinkActive="activeLink"
+                >
+                    <a routerLink="/home" title="Wszystkie sekwencje">
+                        <img src="assets/header-img/videos.png" alt="Wszystkie sekwencje">
+                    </a>
+                </li>
+                <li class="account-videos" id="accountLi" 
+                    routerLinkActive="activeLink"
+                >
+                    <a routerLink="/my-videos" title="Moje sekwencje">
+                        <img src="assets/header-img/acvideos.png" alt="Moje sekwencje" width="42px">
+                    </a>
+                </li>      
+                <li appDropdown (click)="isMarginB()">
+                    <button type="button" class="accountBtn" data-toggle="collapse">
+                    <img src="assets/header-img/account.png" alt="Moje konto">
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <app-account></app-account>
+                    </ul> 
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

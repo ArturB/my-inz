@@ -1,0 +1,17 @@
+<div class="my-row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-8 sortPadLL">
+        <div class="col-xs-7 sortPad">
+            <select class="form-control input-sm" [(ngModel)]="sortBy" (ngModelChange)="changeSortBy($event)">
+                <option hidden value="nth">Sortuj według: <strong>Brak wyboru</strong></option>
+                <option value="videoName">Sortuj według: Nazwa</option>
+                <option value="videoDate">Sortuj według: Data</option>
+            </select>
+        </div>
+        <div class="col-xs-5 sortPad">
+            <select class="form-control input-sm" [(ngModel)]="sortOrder" (ngModelChange)="changeSortOrder($event)">
+                <option value="asc">Rosnąco</option>
+                <option value="desc">Malejąco</option>
+            </select>
+        </div>
+    </div>
+</div>

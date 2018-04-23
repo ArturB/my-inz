@@ -1,0 +1,69 @@
+.closeInf {
+	margin-top: 26px;
+
+	text-align: center;
+	border: 1px solid #747375;
+	box-shadow: 0px 4px 20px 4px rgba(212, 207, 207, 0.19);
+	/*margin: 160px 0 0 0;*/
+	padding: 18px 20px 20px 22px;
+	background-color: #271f29;
+    opacity: 0.8;
+    border-top-left-radius: 22px;
+    border-bottom-left-radius: 22px;
+	-webkit-transition: .5s ease;
+    transition: .5s ease;
+}
+.closeInf:focus, .closeInf:hover, .closeInf:active {
+    opacity: 1;	
+}
+.closeInf button {
+	background-color: #181419;
+	border: 2px solid #7f7e7f;
+	border-radius: 18px;
+	float: left;
+	margin-top: -31px;
+	margin-left: -33px;
+	padding-right: 18px;
+	padding-top: 1px;
+
+	width: 24px;
+	height: 27px;
+}
+.glyphicon-remove {
+	color: #fcfcfc;
+	font-size: 0.9em;
+	opacity: 0.9;
+  	transition: all 0.4s;
+  	padding-top: 3px;
+  	padding-right: 1px;
+
+}
+.closeInf ul {
+	list-style: none;
+	padding: 0;
+
+}
+.successLeft {
+	margin-right: 10px;
+	background: #24ce87; 
+    border: 1px solid #7a7b7e; 
+    width: 36px; 
+    height: 36px; 
+    border-radius: 18px;
+}
+
+.glyphicon-ok {
+	color: #fcfcfc;
+	font-size: 1.3em;
+	padding: 7px 1px 0 1px;
+   
+}
+
+.padL {
+	padding-left: 6px;
+}
+.padR {
+	padding-right: 0;
+}
+
+

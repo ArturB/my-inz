@@ -1,0 +1,18 @@
+/*SEKWENCJA*/
+#noVideos {
+  margin-top: 40px; text-align: center;
+}
+#noVideos h2 {
+  margin-top: 40px; font-size: 20px;
+}
+#noVideos h2>a {
+  color: #bb7ea3;
+}
+#noVideos h2>a:hover {
+   color: #b55c92;
+   text-decoration: none;
+ }
+
+.videos-pad {
+    margin-top: 50px;
+}

@@ -1,0 +1,18 @@
+<li>
+    <div class="glyphicon glyphicon-triangle-top">
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-5 acLi">
+        <img class="img-responsive center-block img-circle accountImg" width="110px" src="../assets/ac1.png">
+    </div>
+      
+    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-7 acData">
+        <strong><p id="userData">{{user?.firstName}} {{user?.lastName}}</p></strong>
+        <p>{{user?.email}}</p>
+    </div>
+</li>
+<hr>
+<li class="text-center logOut">
+    <a routerLink="/auth" (click)="onLogout()">
+        <img class="drop-nav-img" src="assets/header-img/logout1.png" alt="Wyloguj" width="36px">WYLOGUJ
+    </a>
+</li>

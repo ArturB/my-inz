@@ -1,0 +1,11 @@
+<div [ngStyle]="{'display': display}" class="alert alert-danger">
+    <span class="title">
+    	<strong>{{ error?.title }}</strong>
+	</span>
+    <div>
+    	{{ error?.message }}
+    </div>
+    <p>Aby się wylogować naciśnij <a routerLink="/auth" (click)="onLogout()"><strong>TUTAJ</strong>
+    </a></p>
+    <button type="button" class="glyphicon glyphicon-remove"(click)="onErrorHandled()"></button>
+</div>

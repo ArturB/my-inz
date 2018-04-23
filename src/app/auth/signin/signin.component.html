@@ -1,0 +1,59 @@
+ <div id="loginIn">
+	<form [formGroup]="myForm" class="form-content" (ngSubmit)="login()">
+		<div class="form-group col-email-form">
+			<label for="email" class="form-label">E-mail*</label>
+			<input 
+				type="email" 
+				name="email"
+				id="email" 
+				class="form-input"
+				formControlName="email"
+			> 
+			<div *ngIf="!myForm.get('email').valid && myForm.get('email').touched"
+			    class="alert alert-danger">
+			    <div [hidden]="!myForm.get('email').errors['required']">
+			      Podaj e-mail
+			    </div>
+			    <div [hidden]="!myForm.get('email').errors['email']">
+			      Podany e-mail jest niepoprawny
+			    </div>
+			</div>
+		</div>
+		<div class="form-group col-password-form">
+			<label for="password" class="form-label">Hasło*</label>
+			<input 
+				type="password" 
+				name="password" 
+				id="password" 
+				class="form-input"
+				formControlName="password"
+			>
+			<div *ngIf="!myForm.get('password').valid && myForm.get('password').touched"
+			    class="alert alert-danger">
+			    <div [hidden]="!myForm.get('password').errors['required']">
+			      Podaj hasło (od 6 do 24 znaków)
+				</div>
+				<div [hidden]="!myForm.get('password').errors['minlength']">
+			      Podaj hasło (od 6 do 24 znaków)
+			    </div>
+			    <div [hidden]="!myForm.get('password').errors['maxlength']">
+			      Podaj hasło (od 6 do 24 znaków)
+			    </div>
+			</div>
+			<div [ngStyle]="{'display': display}"
+			    class="alert alert-danger">
+			    <div>{{MesError}}</div>
+			</div>
+		</div>
+		<button
+			type="submit"
+			id="login"
+			name="button" 
+			class="btn btn-default log-rej-button"
+			[disabled]="!myForm.valid"
+			>
+			ZALOGUJ SIĘ
+		</button>
+			
+	</form>
+</div>

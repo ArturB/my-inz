@@ -1,0 +1,31 @@
+.my-row {
+	margin-right: 0;
+	margin-left: 0;
+	display: inline-block;
+    width: 100%;
+}
+.sortPad {
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.sortPadLL {
+	padding: 0;
+}
+@media (max-width: 768px) {
+	.sortPad {
+		padding-left: 6px;
+		padding-right: 0;
+	}
+}
+
+.form-control {
+	background-color: #fff5e7;
+}
+
+.form-control:focus {
+	border-color: #ffe9ca;
+
+}
+
+option[value] { background-color: #f9f3e5; }

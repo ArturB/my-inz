@@ -1,0 +1,18 @@
+@media (max-width: 767px) {
+	.searchPad {
+		margin-top: 19px;
+	}
+}
+.searchPad {
+	padding-left: 6px;
+	padding-right: 0;
+}
+
+.form-control {
+	background-color: #fff5e7;
+}
+
+.form-control:focus {
+	border-color: #ffe9ca;
+
+}

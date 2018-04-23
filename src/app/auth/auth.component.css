@@ -1,0 +1,87 @@
+.container {
+    background-color: #f3e3cf;
+    background: url('../../assets/ac.png') no-repeat fixed;
+    background-size: cover;
+    min-height: 100%;
+    /*height: 100%;*/
+    width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-size: 13px;
+}
+.form-container {
+    margin: 0 auto;
+    margin-top: 26%;
+    margin-bottom: 40px;
+    background-color: #453a46;    
+    max-width: 510px;
+    border-radius: 6px;
+    box-shadow: 0 4px 80px #e3d8c2;
+}
+
+
+@media (min-width: 1080px) {
+    .form-container {
+        margin: 0 auto;
+        margin-top: 12%;
+    }
+}
+
+@media (max-height: 512px) {
+    .form-container {
+        margin: 0 auto;
+        margin-bottom: 8%;
+    }
+}
+
+.top-form {
+    padding-top: 30px;
+    margin: 30px;
+
+}
+
+.nav-tabs {
+     border: none; 
+}
+
+.top-form .tt{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.top-form>li>a {
+    display: block;
+    text-decoration: none;
+    padding: 13px;
+    background: rgba(84, 97, 95, 0.25);
+    color: #95a5a2;
+    font-size: 17px;
+    float: left;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+}
+
+.nav-tabs>li>a {
+    border: none;
+    border-radius: 0; 
+}
+
+.nav-tabs>li.activeLog>a, .nav-tabs>li.activeLog>a:hover, .nav-tabs>li.activeLog>a:focus {
+    color: #fff;
+    background-color: #676466;
+    border: none;
+    cursor: default;
+}
+.nav-tabs>li>a:hover, .nav-tabs>li>a:focus {
+  background-color: #7f7a7d;
+  color: #fff;
+}

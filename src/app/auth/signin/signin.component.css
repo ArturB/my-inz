@@ -1,0 +1,60 @@
+.form-group {
+    margin: 8px 30px;
+}
+
+.col-surname-form, .col-name-form {
+    padding: 0;
+}
+
+.form-label{
+    font-size: 16px;
+    color: #fcfcfc;
+    font-weight: 600;
+    padding-top: 6px;
+}
+
+.form-content input {   
+    background-color: rgb(250, 250, 250);
+    padding: 12px 10px;
+
+    border: 1px solid #d0d0d0;
+    width: 100%;
+    color: #333;
+}
+
+.log-rej-button {
+    padding: 18px 16px;
+    background-color: #bb7ea3;
+    color: #fff;
+    font-weight: 600;
+    transition: background-color 300ms 0s ease;
+    border-radius: 0 0 6px 6px;
+    border-color: #8a8a82;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+    width: 100%;
+    border: none;
+    font-size: 18px;
+    margin-top: 35px;
+}    
+
+.log-rej-button:hover {
+    background-color: #b55c92;
+    color: #fcfcfc;
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+.alert-danger {
+    background-color: #453a46;
+    border: none;
+    color: #da5050;
+}
+
+.alert {
+    margin-bottom: 0;
+    padding: 0;
+    padding-top: 8px;    
+}

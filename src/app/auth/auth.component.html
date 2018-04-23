@@ -1,0 +1,24 @@
+<div class="container">
+ 	<div class="form-container">
+	 	<div class="col-form">
+			<ul class="top-form nav nav-tabs">						
+		        <li class="tt col-lg-6 col-md-6 col-sm-6 col-xs-12" 
+		        	routerLinkActive="activeLog">
+          			<a routerLink="signin"
+	       		>Logowanie</a>
+       			</li>				   
+		        <li class="tt col-lg-6 col-md-6 col-sm-6 col-xs-12" 
+		        	routerLinkActive="activeLog">
+          			<a routerLink="signup"
+		       			>
+		        		Rejestracja</a>
+	       		</li>
+		    </ul>
+			
+			<div class="tab-content">
+				<router-outlet></router-outlet>
+			</div>
+			
+		</div>
+	</div>
+</div>

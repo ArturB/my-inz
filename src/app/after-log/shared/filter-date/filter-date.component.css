@@ -1,0 +1,21 @@
+.my-row {
+	margin-right: 0;
+	margin-left: 0;
+	display: inline-block;
+    width: 100%;
+}
+.sortPad {
+	padding-left: 4px;
+	padding-right: 4px;
+	margin-top: 16px;
+}
+.form-control {
+	background-color: #fff5e7;
+
+}
+@media (max-width: 768px) {
+	.sortPad {
+		padding-left: 6px;
+		padding-right: 6px; 
+	}
+}

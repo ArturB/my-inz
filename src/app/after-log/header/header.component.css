@@ -1,0 +1,88 @@
+/*TOP NAVIGATION*/
+nav {
+  background-color: #271f29;
+  text-align: right;
+}
+
+.navbar-inverse {
+	background-color: #271f29;
+	border-radius: 0;
+	border-color: #49434c;
+}
+.navbar {
+	width: 100%;
+	margin-bottom: 0;
+	border: none;
+	border-bottom: 1px solid #49434c;
+}
+
+.topNav {
+	margin-bottom: 0;
+	margin-right: -10px;
+}
+
+nav li {
+    display: inline-block;
+    margin: 14px 10px;
+}
+nav a {
+  	opacity: 0.8;
+  	/*transition: all 0.5s;*/
+}
+nav a:hover{
+  	opacity: 1;
+}
+
+.activeLink a {
+  	opacity: 1;
+	cursor: default;
+  	
+}
+
+.my-container {
+	margin: 0 10px;
+}
+
+/*ACCOUNT MENU*/
+.dropdown-menu {
+	background-color: #fff5e7;
+	border-color: #49434c;
+	border-top-right-radius: 0;
+	border-top-left-radius: 0;
+    margin-top: -1px;
+    margin-right: 11px;
+    padding: 17px;
+    min-width: 200px;
+    padding: 0;
+}
+
+.accountBtn {
+	background-color: #271f29;
+	border: none;
+	opacity: 0.8;
+}
+
+.isAccount .accountBtn {
+	opacity: 1;
+	
+}
+
+@media (min-width: 1229px) {
+	.topNav {
+		margin-right: 30px;		
+	}
+	.dropdown-menu {
+		margin-right: 50px;
+	}
+}
+
+@media (max-width: 768px) {
+	.dropdown-menu {
+		width: 100%;
+		margin: 0;
+	}
+	.isMarginB {
+		margin-bottom: 234px;
+	}
+}
+

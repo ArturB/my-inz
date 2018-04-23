@@ -1,0 +1,79 @@
+<div *ngIf="videos?.length>0; else infoText" class="videos-pad">
+
+    <div class="fixItem">
+        <app-inform-add 
+            *ngFor="let videoName of adds"
+            [nameDef]="videoName"
+            [addsDef]="adds"
+            >        
+        </app-inform-add>
+    </div>
+
+    <div class="block-center" *ngIf="videos?.length>1">
+        <app-sort
+            [(sortBy)]="sortBy"
+            [(sortOrder)]="sortOrder">
+        </app-sort>
+
+    </div>
+
+    <div class="set-recordings text-right" *ngIf="videos?.length>1">
+        <button type="submit"
+        [ngClass]="{isSearch: isSearchVisible, searchBtn: true}"
+        (click)="showFilterDate($event)"          
+        title="Wyszukaj">            
+                <span class="glyphicon glyphicon-search"></span>
+        </button>
+
+    	<button 
+    		type="submit" 
+     		[ngClass]="isClassVisible" 
+    		(click)="setFour()" title="Mniej sekwencji">            
+    	    <span class="glyphicon glyphicon-th-large" ></span>
+    	</button>
+    	<button 
+    		type="submit" 		 
+     		[ngClass]="isClassVisible2"
+    		(click)="setSix()" title="Więcej sekwencji">
+    	    <span class="glyphicon glyphicon-th"></span>
+    	</button>
+    </div>
+
+    <div class="searchAll" *ngIf="settOpen">
+
+        <div class="search-center" *ngIf="videos?.length>1">    
+            <app-filter                             
+                (filterChange)="filterChange($event)"
+                class="margR">
+            </app-filter> 
+        </div>
+        <div class="filterDate">
+            <app-filter-date
+                (filterDMinChange)="filterDMinChange($event)"
+                (filterDMaxChange)="filterDMaxChange($event)">
+            </app-filter-date>
+        </div>
+    </div>
+    
+</div>
+
+<div class="vpBtn">
+	<app-video-item
+        class="pad"
+		[ngClass]="classCol"
+		id="nRecordings"
+        (onOpenInfAdd)="openInfAdd($event)"		
+	    *ngFor="let videoEl of videos | filter: {videoName: filterText} : false | filterDate: filterTextMin : false | filterDateMax: filterTextMax : false | sort: sortBy : sortOrder"
+	    [video]="videoEl">
+            
+	</app-video-item>				     
+</div>
+
+<ng-template #infoText>
+    <div id="noVideos">
+        <h1>Nie ma żadnych sekwencji!</h1>
+    </div>
+</ng-template>
+
+
+

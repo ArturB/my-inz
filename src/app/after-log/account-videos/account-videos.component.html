@@ -1,0 +1,84 @@
+<div class="my-container">		
+	<div class="content-container">
+		
+		<div *ngIf="acVideos?.length>0; else infoText">
+			<div class="fixItem">
+			    <app-inform-remove 
+			        *ngFor="let name of removes"
+			        [nameDef]="name"
+			        [removesDef]="removes"
+			        >        
+			    </app-inform-remove>
+			</div>
+
+			<div class="block-center" *ngIf="acVideos?.length>1">
+				
+				<app-sort
+		            [(sortBy)]="sortBy"
+		            [(sortOrder)]="sortOrder">
+		        </app-sort>
+			</div>
+
+			<div class="set-recordings text-right" *ngIf="acVideos?.length>1">
+		        <button type="submit" 
+		        	[ngClass]="{isSearch: isSearchVisible, searchBtn: true}"
+		        	(click)="showFilterDate($event)"
+		        	title="Wyszukaj">            
+	                <span class="glyphicon glyphicon-search"></span>
+		        </button>
+		    	<button 
+		    		type="submit" 
+		     		[ngClass]="isClassVisible" 
+		    		(click)="setFour()" title="Mniej sekwencji">            
+		    	    <span class="glyphicon glyphicon-th-large"></span>
+		    	</button>
+	        	<button 
+	        		type="submit" 		 
+	         		[ngClass]="isClassVisible2"
+	        		(click)="setSix()" title="Więcej sekwencji">
+	        	    <span class="glyphicon glyphicon-th"></span>
+	        	</button>
+		    </div>
+
+		    <div *ngIf="acVideos?.length>1">
+			    <div class="searchAll" *ngIf="settOpen">
+			        <div class="search-center">    
+			            <app-filter                             
+			                (filterChange)="filterChange($event)"
+			                class="margR">
+			            </app-filter>
+			        </div>
+			        <div class="filterDate">
+			            <app-filter-date
+			                (filterDMinChange)="filterDMinChange($event)"
+			                (filterDMaxChange)="filterDMaxChange($event)">
+			            </app-filter-date>
+			        </div>
+			    </div>
+			</div>
+
+		</div>
+
+
+		<div class="videos-pad">
+			<app-account-videos-list 
+				class="pad"
+				[ngClass]="classCol"	
+
+				(onOpenInfRemove)="openInfRemove($event)"
+
+				*ngFor="let acVideoEl of acVideos | filter: {videoName: filterText} : false| filterDate: filterTextMin : false | filterDateMax: filterTextMax : false | sort: sortBy : sortOrder"
+		        [acVideo]="acVideoEl">
+
+	        </app-account-videos-list>
+  		</div>
+
+        <ng-template #infoText>
+        <div id="noVideos">
+			<h1>Nie masz wybranych sekwencji!</h1>
+			<h2>Przejdź do zakładki  <a routerLink="/home">Wszystkie sekwencje</a><br>aby dodać je do swojego konta</h2>
+		</div>
+		</ng-template>
+
+	</div>		
+</div>	

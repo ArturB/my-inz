@@ -1,0 +1,22 @@
+<div class="video-caption">
+    <p class="caption leftstr"><b>{{acVideo.videoName}}</b></p>
+    <div class="rightstr">
+        <p class="caption">{{acVideo.videoDate | date:'yyyy-MM-dd'}}</p>
+    </div>
+    <span class="video-top-buttons">
+        <button type="submit" class="" (click)="removeVideo()" title="Usuń z konta"
+        >
+            <span class="glyphicon glyphicon-minus"></span>
+        </button>         
+    </span>
+</div>
+<div class="embed-responsive embed-responsive-16by9 sekwencja">        
+    <video 
+      class="embed-responsive-item movie"
+      autoplay        
+      controls>        
+        <source 
+            [src]="acVideo.videoPath" 
+            type="video/mp4">	
+    </video>
+</div>

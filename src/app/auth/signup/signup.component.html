@@ -1,0 +1,150 @@
+<div *ngIf="success">
+	<div class="backdrop"></div>
+
+	<div class="frame">
+		<div class="modal">
+		    <div class="glyphicon glyphicon-ok successLeft"></div>
+		    <span class="title"><strong>{{TitleSuccess}}</strong></span>
+		    <p>{{MesSuccess}}</p>
+		    <button type="button" class="closeButton"(click)="onSuccessHandled()"><strong>Przejdź do logowania</strong></button>
+		</div>
+	</div>
+</div>
+<div id="signup">
+	<form [formGroup]="myForm" class="form-content" (ngSubmit)="logup()">
+		<div class="col-lg-6 col-md-6 col-name-form">
+			<div class="form-group pad-r">
+				<label for="firstName" class="form-label">Imię*</label>
+				<input 
+					type="text" 
+					id="firstName" 
+					name="firstName" 
+					class="form-input"
+					formControlName="firstName"
+				>
+				<div *ngIf="!myForm.get('firstName').valid && myForm.get('firstName').touched"
+				    class="alert alert-danger">
+				    <div [hidden]="!myForm.get('firstName').errors['required']">
+				      Podaj imię (od 2 do 24 znaków)
+				    </div>
+				    <div [hidden]="!myForm.get('firstName').errors['pattern']">
+				      Podane imię jest niepoprawne
+				    </div>
+				    <div [hidden]="!myForm.get('firstName').errors['minlength']">
+				      Podaj imię (od 2 do 24 znaków)
+				    </div>
+				    <div [hidden]="!myForm.get('firstName').errors['maxlength']">
+				      Podaj imię (od 2 do 24 znaków)
+				    </div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-lg-6 col-md-6 col-surname-form">
+			<div class="form-group pad-l">
+				<label for="lastName" class="form-label">Nazwisko*</label>
+				<input 
+					type="text" 
+					id="lastName" 
+					name="lastName" 
+					class="form-input"
+					formControlName="lastName"
+				>
+				<div *ngIf="!myForm.get('lastName').valid && myForm.get('lastName').touched"
+				    class="alert alert-danger">
+				    <div [hidden]="!myForm.get('lastName').errors['required']">
+				      Podaj nazwisko (od 2 do 24 znaków)
+				    </div>
+				    <div [hidden]="!myForm.get('lastName').errors['pattern']">
+				      Podane nazwisko jest niepoprawne
+				    </div>
+				    <div [hidden]="!myForm.get('lastName').errors['minlength']">
+				      Podaj nazwisko (od 2 do 24 znaków)
+				    </div>
+				    <div [hidden]="!myForm.get('lastName').errors['maxlength']">
+				      Podaj nazwisko (od 2 do 24 znaków)
+				    </div>
+				</div>
+			</div>
+		</div>
+		<div class="form-group col-email-form">
+			<label id="emailLabel" for="email" class="form-label">E-mail*</label>
+			<input 
+				type="email" 
+				id="email" 
+				name="email" 
+				class="form-input"
+				formControlName="email"
+			>
+			<div *ngIf="!myForm.get('email').valid && myForm.get('email').touched"
+			    class="alert alert-danger">
+			    <div [hidden]="!myForm.get('email').errors['required']">
+			      Podaj e-mail
+			    </div>
+			    <div [hidden]="!myForm.get('email').errors['email']">
+			      Podany e-mail jest niepoprawny
+			    </div>
+			</div>
+			<div [ngStyle]="{'display': displayEr}"
+			    class="alert alert-danger">
+			    <div>{{MesError}}</div>
+			</div>
+		</div>
+		<div class="form-group col-password-form">
+			<label for="password" class="form-label">Hasło*</label>
+			<input 
+				type="password" 
+				id="password" 
+				name="password" 
+				class="form-input"
+				formControlName="password"
+			>
+			<div *ngIf="!myForm.get('password').valid && myForm.get('password').touched"
+			    class="alert alert-danger">
+			    <div [hidden]="!myForm.get('password').errors['required']">
+			      Podaj hasło (od 6 do 24 znaków)
+			    </div>
+			    <div [hidden]="!myForm.get('password').errors['minlength']">
+			      Podaj hasło (od 6 do 24 znaków)
+			    </div>
+			    <div [hidden]="!myForm.get('password').errors['maxlength']">
+			      Podaj hasło (od 6 do 24 znaków)
+			    </div>
+			</div>
+		</div>
+		<div class="form-group col-password-form">
+			<label for="ConfirmPassword" class="form-label">Powtórz hasło*</label>
+			<input 
+				type="password" 
+				id="ConfirmPassword" 
+				name="ConfirmPassword" 
+				class="form-input"
+				formControlName="ConfirmPassword"
+			>
+			<div *ngIf="!myForm.get('ConfirmPassword').valid && myForm.get('ConfirmPassword').touched"
+			    class="alert alert-danger">
+			    <div [hidden]="!myForm.get('ConfirmPassword').errors['required']">
+			      Podaj hasło (od 6 do 24 znaków)
+			    </div>
+			    <div [hidden]="!myForm.get('ConfirmPassword').errors['matchOther']">
+			      Podane hasła nie są identyczne
+			    </div>
+			    <div [hidden]="!myForm.get('ConfirmPassword').errors['minlength']">
+			      Podaj hasło (od 6 do 24 znaków)
+			    </div>
+			    <div [hidden]="!myForm.get('ConfirmPassword').errors['maxlength']">
+			      Podaj hasło (od 6 do 24 znaków)
+			    </div>
+			</div>
+		</div>
+		<button 
+			type="submit"
+			name="button"
+			class="btn btn-default log-rej-button btn-lg"
+			[disabled]="!myForm.valid"
+			>
+			ZAREJESTRUJ SIĘ
+		</button>
+										
+	</form>
+</div>
